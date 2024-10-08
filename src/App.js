@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {Routes, Route, BrowserRouter } from 'react-router-dom';
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import ProductList from './components/ProductList';
@@ -22,17 +22,20 @@ const App = () => {
   };
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
-      <Router>
+    <div>
+      <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+        <BrowserRouter>
         <Header />
         <SearchBar />
-        <Routes>
-          <Route path="/" element={<ProductList />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-      </Router>
-    </CartContext.Provider>
+          <Routes>
+            <Route path="/" element={<ProductList />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </BrowserRouter>
+      </CartContext.Provider>
+    </div>
+
   );
 };
 
