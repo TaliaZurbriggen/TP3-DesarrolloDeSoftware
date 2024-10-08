@@ -7,8 +7,8 @@ const SearchBar = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    navigate(`/search?q=${query}`);
-  };
+    navigate(`/?q=${query}`);
+  };  
 
   return (
     <form onSubmit={handleSearch}>
