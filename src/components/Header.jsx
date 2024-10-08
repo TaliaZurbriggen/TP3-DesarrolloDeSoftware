@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import { useContext } from 'react';
-import { CartContext } from './CartContext';
+import React from 'react';
+import { useCartContext } from '../App';
 
 const Header = () => {
-  const { cart } = useContext(CartContext);
+  const { cart } = useCartContext();
 
   return (
     <header>
