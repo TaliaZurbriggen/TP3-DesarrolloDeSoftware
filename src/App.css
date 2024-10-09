@@ -1,42 +1,64 @@
-.App {
-  text-align: center;
+*{
+  background-color: #fcfcf6;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header nav{
+    font-family: 'Poppins', sans-serif;
+    padding: 10px; 
+    display: flex;
+    justify-content: center;       
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-link {
+  color: #000; 
+  text-decoration: none; 
+  font-weight: bold; 
+  font-size: 20px; 
+  display: block; 
+  padding: 10px 20px; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-link:hover {
+  background-color: #f5f5dc; 
+  border-radius: 5px; 
+}
+
+header h1{
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-decoration: underline;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+form{
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form input{
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+    font-size: 15px;
+    resize: none;
 }
-.h1{
-  font-family: cursive;
-  font-size: medium;
+
+form button{
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  margin-left: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+form button:hover{
+  background-color: #f5f5dc; 
 }

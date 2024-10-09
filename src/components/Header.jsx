@@ -7,13 +7,13 @@ const Header = () => {
 
   return (
     <header>
-      <h1>Mi Tienda</h1>
       <nav>
-        <Link to="/search">Buscar Productos</Link>
-        <Link to="/cart">
+        <Link to="/search" className='nav-link'>Buscar Productos</Link>
+        <Link to="/cart" className='nav-link'>
           Carrito ({cart.length})
         </Link>
       </nav>
+      <h1>Mi Tienda</h1>
     </header>
   );
 };

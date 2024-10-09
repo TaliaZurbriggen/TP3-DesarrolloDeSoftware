@@ -13,12 +13,15 @@ const SearchBar = () => {
   return (
     <form onSubmit={handleSearch}>
       <input
+        className='input-SearchBar'
         type="text"
         placeholder="Buscar productos"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
-      <button type="submit">Buscar</button>
+      <button 
+      className='button-SearchBar'
+      type="submit">Buscar</button>
     </form>
   );
 };

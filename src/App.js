@@ -5,6 +5,7 @@ import SearchBar from './components/SearchBar';
 import ProductList from './components/ProductList';
 import ProductDetail from './components/Detail';
 import Cart from './components/Cart';
+import './App.css'
 
 // Crea el contexto para el carrito
 const CartContext = createContext();
