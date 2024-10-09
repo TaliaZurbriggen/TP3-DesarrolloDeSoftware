@@ -21,9 +21,9 @@ const ProductList = () => {
   }, [query]);
 
   return (
-    <div>
+    <div className='list'>
       <h2>Resultados de búsqueda</h2>
-      <ul>
+      <ul style={{ padding: '0', listStyleType: 'none' }}>
         {products.length > 0 ? (
           products.map((product) => (
             <li key={product.id}>
@@ -31,8 +31,10 @@ const ProductList = () => {
               <h3>{product.title}</h3>
               <p>${product.price}</p>
               {/* Botón para agregar el producto al carrito */}
-              <button onClick={() => addToCart(product)}>Agregar al carrito</button>
-              <Link to={`/product/${product.id}`}>Ver detalles</Link>
+              <div className='container'>
+                <button onClick={() => addToCart(product)}>Agregar al carrito</button>
+                <Link to={`/product/${product.id}`}>Ver detalles</Link>
+              </div>
             </li>
           ))
         ) : (
