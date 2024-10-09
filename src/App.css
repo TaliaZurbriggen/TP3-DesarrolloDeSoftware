@@ -180,3 +180,57 @@ form button:hover{
   text-align: center;
 }
 
+.contenedor-lista {
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding: 10px;
+  margin: 20px 0;
+}
+.contenedor-lista h2, h3{
+  padding-left: 40px;
+
+}
+
+.contenedor-lista li {
+  list-style-type: none;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.boton-eliminar-carrito {
+  font-style: oblique;
+  color: white;
+  background-color: rgb(223, 0, 0);
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 80px;
+}
+
+.carrito-producto {
+  display: flex;
+  align-items: flex-start;
+}
+
+.carrito-producto img {
+  margin-right: 15px;
+  max-width: 100px;
+  height: auto;
+}
+
+.carrito-producto h3,
+.carrito-producto p {
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+.producto-detalle {
+  display: flex;
+  flex-direction: column;
+}

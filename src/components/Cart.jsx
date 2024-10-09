@@ -8,20 +8,27 @@ const Cart = () => {
   const totalPrice = cart.reduce((total, product) => total + product.price, 0);
 
   return (
-    <div>
-      <h2>Carrito de Compras</h2>
-      <ul>
-        {cart.map((product) => (
-          <li key={product.id}>
-            <img src={product.thumbnail} alt={product.title} />
+  <div className='contenedor-lista'>
+  <h2>Carrito de Compras</h2>
+  <ul>
+    {cart.map((product) => (
+      <li key={product.id}>
+        <div className='carrito-producto'>
+          <img src={product.thumbnail} alt={product.title} />
+          <div className='producto-detalle'>
             <h3>{product.title}</h3>
-            <p>${product.price}</p>
-            <button onClick={() => removeFromCart(product.id)}>Eliminar</button>
-          </li>
-        ))}
-      </ul>
-      <h3>Total: ${totalPrice}</h3>
-    </div>
+            <p>Precio: ${product.price}</p>
+            <button onClick={() => removeFromCart(product.id)} className='boton-eliminar-carrito'>
+              Eliminar
+            </button>
+          </div>
+        </div>
+      </li>
+    ))}
+  </ul>
+  <h3>Total: ${totalPrice}</h3>
+</div>
+
   );
 };
 
