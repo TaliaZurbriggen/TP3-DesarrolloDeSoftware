@@ -22,10 +22,10 @@ const Detail = () => {
   if (!product) return <p>Cargando...</p>;
 
   return (
-    <div>
+    <div className='detail'>
       <h2>{product.title}</h2>
       <img src={product.pictures[0].secure_url} alt={product.title} />
-      <p>Precio: ${product.price}</p>
+      <p className='precio'>Precio: ${product.price}</p>
       <p>{description ? description : 'Descripción no disponible'}</p> {/* Mostrar la descripción */}
       <Link to="/">Volver a la búsqueda</Link>
     </div>
